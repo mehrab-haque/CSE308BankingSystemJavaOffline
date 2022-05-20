@@ -24,4 +24,28 @@ public class Bank {
             instance=new Bank();
         return instance;
     }
+
+    public boolean nameExists(String name){
+        //need to code
+        return true;
+    }
+
+    public int getClock() {
+        return clock;
+    }
+
+
+    private void deductServiceCharge(){
+        for(Account account:accounts)
+            account.deductServiceCharge();
+    }
+
+    public void deductLoanInterest(){
+        for(Account account:accounts)
+
+    }
+
+    public void incrementClock(){
+
+    }
 }
