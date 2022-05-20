@@ -28,4 +28,9 @@ public class StudentAccount extends Account{
     public double getInterestPCT() {
         return Constants.INTEREST_PCT_STUDENT;
     }
+
+    @Override
+    public void addProfitInterest() {
+        setDeposit(getDeposit()+getDeposit()*Constants.INTEREST_PCT_STUDENT);
+    }
 }

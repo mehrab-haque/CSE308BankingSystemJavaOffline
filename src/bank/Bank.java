@@ -42,10 +42,20 @@ public class Bank {
 
     public void deductLoanInterest(){
         for(Account account:accounts)
+            account.deductLoanInterest();
+    }
 
+    public void addDepositInterest(){
+        for(Account account:accounts)
+            account.addProfitInterest();
     }
 
     public void incrementClock(){
-
+        addDepositInterest();
+        deductLoanInterest();
+        deductServiceCharge();
+        clock++;
     }
+
+
 }

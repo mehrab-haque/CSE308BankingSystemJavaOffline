@@ -70,7 +70,13 @@ public class Account {
         else deposit-=Constants.ANNUAL_SERVICE_CHARGE;
     }
 
-    public void deductLoanInterest(){}
+    public void deductLoanInterest(){
+        if(loan*Constants.LOAN_INTEREST_PCT/100>deposit)
+            deposit=0;
+        else deposit-=loan*Constants.LOAN_INTEREST_PCT/100;
+    }
+
+    public void addProfitInterest(){}
 
     protected void setDeposit(double deposit) {
         this.deposit = deposit;

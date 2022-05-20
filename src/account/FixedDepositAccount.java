@@ -42,7 +42,7 @@ public class FixedDepositAccount extends Account {
     }
 
     @Override
-    public void deductLoanInterest() {
-
+    public void addProfitInterest() {
+        setDeposit(getDeposit()+getDeposit()*Constants.INTEREST_PCT_FD);
     }
 }

@@ -28,4 +28,9 @@ public class SavingsAccount extends Account {
     public double getInterestPCT() {
         return Constants.INTEREST_PCT_SAVINGS;
     }
+
+    @Override
+    public void addProfitInterest() {
+        setDeposit(getDeposit()+getDeposit()*Constants.INTEREST_PCT_SAVINGS);
+    }
 }
