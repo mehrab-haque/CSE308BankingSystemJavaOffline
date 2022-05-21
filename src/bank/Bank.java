@@ -1,14 +1,17 @@
 package bank;
 
 import account.Account;
+import account.StudentAccount;
+import config.Constants;
 import employee.Employee;
+import exception.AccountCreationException;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
     private static Bank instance=null;
-
+    private static double internalFund;
     private int clock;
     private List<Account> accounts;
     private List<Employee> employees;
@@ -17,6 +20,7 @@ public class Bank {
         clock=0;
         accounts=new ArrayList<>();
         employees=new ArrayList<>();
+        internalFund= Constants.INITIAL_INTERNAL_FUND;
     }
 
     public static synchronized Bank getInstance(){
@@ -50,11 +54,23 @@ public class Bank {
             account.addProfitInterest();
     }
 
+    public double getInternalFund(){
+        return internalFund;
+    }
+
+    public void setInternalFund(double amount){
+        internalFund+=amount;
+    }
+
     public void incrementClock(){
         addDepositInterest();
         deductLoanInterest();
         deductServiceCharge();
         clock++;
+    }
+
+    public Account getAccountByName(String name){
+        return accounts.get(0);
     }
 
 

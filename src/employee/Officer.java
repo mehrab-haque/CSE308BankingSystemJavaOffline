@@ -1,4 +1,7 @@
 package employee;
 
-public class Officer {
+public class Officer extends Employee {
+    public Officer(String name){
+        super(name);
+    }
 }

@@ -17,7 +17,7 @@ public class FixedDepositAccount extends Account {
 
     @Override
     public void deposit(double amount) throws DepositException {
-        if(amount<Constants.FD_MIN_DEPOSITE)
+        if(amount<Constants.FD_MIN_DEPOSIT)
             throw new DepositException(DepositException.MSG_FD_MIN_DEPOSIT);
         super.deposit(amount);
     }
