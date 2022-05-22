@@ -16,11 +16,16 @@ public class Constants {
     public static double INTEREST_PCT_STUDENT=5;
     public static double INTEREST_PCT_FD=15;
     public static double ANNUAL_SERVICE_CHARGE=500;
-    public static String AC_TYPE_FD="fixed deposit account";
-    public static String AC_TYPE_SAVINGS="savings account";
-    public static String AC_TYPE_STUDENT="student account";
+    public static String AC_TYPE_FD="fd";
+    public static String AC_TYPE_SAVINGS="savings";
+    public static String AC_TYPE_STUDENT="student";
+    public static String AC_TYPE_LOAN="loan";
 
     public static double INITIAL_INTERNAL_FUND=1000000;
+
+    public static String EMPLOYEE_TYPE_MD="md";
+    public static String EMPLOYEE_TYPE_OFFICER="officer";
+    public static String EMPLOYEE_TYPE_CASHIER="cashier";
 
 
 }

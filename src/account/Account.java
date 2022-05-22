@@ -13,7 +13,9 @@ public class Account {
     private double loan;
     private double requestedLoan;
 
-    public Account(){}
+    public Account(){
+        super();
+    }
 
     public Account(String name,double deposit,double loan) throws AccountCreationException {
         if(name.trim().length()==0)
@@ -70,6 +72,10 @@ public class Account {
         else deposit-=Constants.ANNUAL_SERVICE_CHARGE;
     }
 
+    public String getName(){
+        return name;
+    }
+
     public void deductLoanInterest(){
         if(loan*Constants.LOAN_INTEREST_PCT/100>deposit)
             deposit=0;
@@ -92,6 +98,6 @@ public class Account {
 
     public void addRequestedLoan (){
         loan+=requestedLoan;
-        Bank.getInstance().setInternalFund(Bank.getInstance().getInternalFund()-requestedLoan);
+        deposit+=requestedLoan;
     }
 }

@@ -11,6 +11,14 @@ public class Employee {
         this.name=name;
     }
 
+    public Employee() {
+
+    }
+
+    public String getName(){
+        return name;
+    }
+
     public double lookup(String acName) throws QueryException{
         if(!Bank.getInstance().nameExists(acName))
             throw new QueryException(QueryException.USER_NOT_FOUND);
@@ -43,5 +51,9 @@ public class Employee {
 
     public double getInternalFund() throws QueryException{
         throw new QueryException(QueryException.NOT_ALLOWED);
+    }
+
+    public String getType(){
+        return null;
     }
 }

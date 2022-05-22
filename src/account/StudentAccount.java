@@ -31,6 +31,6 @@ public class StudentAccount extends Account{
 
     @Override
     public void addProfitInterest() {
-        setDeposit(getDeposit()+getDeposit()*Constants.INTEREST_PCT_STUDENT);
+        setDeposit(getDeposit()+getDeposit()*Constants.INTEREST_PCT_STUDENT/100);
     }
 }
