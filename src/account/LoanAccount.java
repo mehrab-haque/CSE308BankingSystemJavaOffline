@@ -8,12 +8,13 @@ import exception.WithdrawException;
 
 public class LoanAccount extends Account{
     public LoanAccount(String name, double loan) throws AccountCreationException {
-        super(name,0,loan);
+        super(name,loan,loan);
     }
 
     @Override
-    public void deposit(double amount){
-        reduceLoan(amount);
+    public void deposit(double amount) throws DepositException {
+        super.reduceLoan(amount);
+
     }
 
     @Override

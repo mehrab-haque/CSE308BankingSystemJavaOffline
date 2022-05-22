@@ -31,6 +31,6 @@ public class SavingsAccount extends Account {
 
     @Override
     public void addProfitInterest() {
-        setDeposit(getDeposit()+getDeposit()*Constants.INTEREST_PCT_SAVINGS);
+        setDeposit(getDeposit()+getDeposit()*Constants.INTEREST_PCT_SAVINGS/100);
     }
 }

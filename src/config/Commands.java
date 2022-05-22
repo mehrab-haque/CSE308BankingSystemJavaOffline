@@ -13,4 +13,5 @@ public class Commands {
     public static String COMMAND_LOOKUP="Lookup";
     public static String COMMAND_SEE="See";
     public static String COMMAND_INC="INC";
+    public static String COMMAND_EXIT="EXIT";
 }

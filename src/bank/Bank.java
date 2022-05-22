@@ -78,7 +78,7 @@ public class Bank {
     }
 
     public void setInternalFund(double amount){
-        internalFund+=amount;
+        internalFund=amount;
     }
 
     public void incrementClock(){

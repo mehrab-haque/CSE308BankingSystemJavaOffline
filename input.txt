@@ -1,0 +1,22 @@
+
+
+Create Alice Loan 100000
+Deposit 20000
+Withdraw 6000
+Query
+Request 500
+Close
+Open MD
+Approve Loan
+Change Student 7.50
+Lookup Alice
+See
+Close
+Open Alice
+Query
+Close
+INC
+Open Alice
+Query
+Close
+EXIT
